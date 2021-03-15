@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla Weather App</title>
-    <link rel="stylesheet" href="src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Courgette&family=Encode+Sans:wght@100&family=Gloria+Hallelujah&family=Indie+Flower&family=Pacifico&family=Quattrocento+Sans&family=Sacramento&family=Satisfy&family=Special+Elite&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <div class="weather-app-container">
-    <div class="container border p-2 mt-2">
+    <div class="container border p-2 mt-2 weather-app">
      
         <form>
                 <div class="row g-3">
@@ -19,10 +24,10 @@
                         <input type="text" class="form-control" placeholder="Type a city...">
                     </div>
                     <div class="col-3">
-                        <button type="submit" class="form-control">Search</button>
+                        <button type="submit" class="form-control search-button">Search</button>
                     </div>
                     <div class="col-3">
-                        <button type="submit" class="form-control">Where am I?</button>
+                        <button type="submit" class="form-control current-button">Where am I?</button>
                     </div>
                 </div>
 
@@ -30,13 +35,13 @@
         <div class="row">
             <div class="col-md-6">
                  <ul>
-                    <li>St Anton am Arlberg</li>
+                    <li class="city-name">St Anton am Arlberg</li>
                     <li>Clear</li>
                     <li>Saturday, 17:00</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <ul>
+                <ul class="features">
                     <li>Precipitation</li>
                     <li>Humidity</li>
                     <li>Wind</li>
@@ -44,19 +49,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-              <h1>0 °C | °F</h1>
+            <div class="col-md-6 degree">
+              <h1><span class="exact-degree">0</span><span class="celsius">°C</span><span class="separation-line">|</span><span class="fahrenheit">°F</span></h1>
 
             </div>
             <div class="col-md-6">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/snow.png" alt="snow">
+               <img src="https://ssl.gstatic.com/onebox/weather/64/snow.png" alt="snow" class="weather-icon">
         
             </div>
         </div>
             
     
     </div>
-        <small> <a href="https://github.com/AgnesBalogh/vanilla-weather-app" target="_blank">Open source code</a> by Agnes Balogh</small>
+        <small> <a href="https://github.com/AgnesBalogh/vanilla-weather-app" target="_blank" class="git-link">Open source code</a> by Agnes Balogh</small>
     </div>
     <script src="src/app.js"></script>
 </body>
