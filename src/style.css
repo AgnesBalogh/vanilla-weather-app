@@ -14,6 +14,8 @@ ul {
 
 
 
+
+
 .weather-app-container {
     max-width: 600px;
     margin: 30px auto;
@@ -50,22 +52,41 @@ ul {
 .separation-line {
     font-size: 20px;
 }
+.fahrenheit {
+    text-decoration: none;
+}
 .city-input {
-    box-shadow: 2px 4px 4px 2px;
+    box-shadow: 2px 4px 4px 2px #9EA572;
     
 }
 .search-button {
     background-color: #ff7b54;
-    box-shadow: 2px 4px 4px 2px;
-    
+    box-shadow: 2px 4px 4px 2px #9EA572;
     transition: all 200ms ease-in-out;
 }
+.search-button:hover {
+    background-color: black;
+    color: #ff7b54;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
+
 .current-button {
     background-color: #ffd56b;
-    box-shadow: 2px 4px 4px 2px;
-    
+    box-shadow: 2px 4px 4px 2px #9EA572;
     transition: all 200ms ease-in-out;
 }
+
+.current-button:hover {
+    background-color: black;
+    color: #ffd56b;
+    opacity: 0.9;
+
+}
+
 .git-link {
     text-decoration: none;
 }
