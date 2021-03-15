@@ -22,7 +22,8 @@ ul {
 .weather-app {
     padding: 20px;
     border-radius: 5px;
-    background-color: #eeebdd
+    background-color: #eeebdd;
+    box-shadow: 2px 4px 4px 2px;
 }
 .city-name {
     font-size: 30px;
@@ -49,11 +50,21 @@ ul {
 .separation-line {
     font-size: 20px;
 }
+.city-input {
+    box-shadow: 2px 4px 4px 2px;
+    
+}
 .search-button {
     background-color: #ff7b54;
+    box-shadow: 2px 4px 4px 2px;
+    
+    transition: all 200ms ease-in-out;
 }
 .current-button {
     background-color: #ffd56b;
+    box-shadow: 2px 4px 4px 2px;
+    
+    transition: all 200ms ease-in-out;
 }
 .git-link {
     text-decoration: none;
