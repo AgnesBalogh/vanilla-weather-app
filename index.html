@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Courgette&family=Encode+Sans:wght@100&family=Gloria+Hallelujah&family=Indie+Flower&family=Pacifico&family=Quattrocento+Sans&family=Sacramento&family=Satisfy&family=Special+Elite&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="weather-app-container">
@@ -35,22 +36,22 @@
         <div class="row">
             <div class="col-md-6">
                  <ul>
-                    <li class="city-name">St Anton am Arlberg</li>
-                    <li>Clear</li>
+                    <li class="city-name" id="city"></li>
+                    <li id="description"></li>
                     <li>Saturday, 17:00</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <ul class="features">
                     <li>Precipitation:</li>
-                    <li>Humidity:</li>
-                    <li>Wind:</li>
+                    <li>Humidity:<span id="humidity"></span> %</li>
+                    <li>Wind:<span id="wind"></span> km/h</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 degree">
-              <h1><span class="exact-degree">0</span><span class="celsius">°C</span><span class="separation-line">|</span><span class="fahrenheit"><a href="#" class="fahrenheit">°F</a></span></h1>
+              <h1><span class="exact-degree" id="temperature"></span><span class="celsius">°C</span><span class="separation-line">|</span><span class="fahrenheit"><a href="#" class="fahrenheit">°F</a></span></h1>
 
             </div>
             <div class="col-md-6">
