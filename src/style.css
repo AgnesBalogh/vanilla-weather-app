@@ -10,12 +10,15 @@ ul {
     margin: 0;
     padding: 0;
     text-align: center;
-    text-transform: capitalize ;
+   
 }
 
 
 
 
+.to-upper-case {
+    text-transform: capitalize;
+}
 
 .weather-app-container {
     max-width: 600px;
