@@ -43,13 +43,14 @@ ul {
 }
 .degree {
     text-align: center;
+    margin-top: 15px;
 }
 .weather-icon {
     display: block;
     margin: 0 auto;
 }
 .exact-degree {
-    font-size: 50px;
+    font-size: 60px;
 }
 .celsius,
 .fahrenheit,
@@ -93,4 +94,8 @@ ul {
 
 .git-link {
     text-decoration: none;
+}
+
+.data-row {
+    margin-top: 20px;
 }
