@@ -31,6 +31,9 @@ function displayTemperature(response){
     windElement.innerHTML = Math.round(response.data.wind.speed);
     let dateElement = document.querySelector("#date");
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 
 }
 
@@ -38,7 +41,7 @@ function displayTemperature(response){
 
 
 let apiKey = "8d5506121e45cc1baa7953c65681c044";
-let city = "Miercurea Ciuc";
+let city = "Honolulu";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);
