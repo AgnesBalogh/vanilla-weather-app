@@ -38,7 +38,8 @@ function displayTemperature(response){
 
 
 let apiKey = "8d5506121e45cc1baa7953c65681c044";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+let city = "Miercurea Ciuc";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 console.log(apiUrl);
 
