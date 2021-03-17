@@ -57,6 +57,15 @@ ul {
 .separation-line {
     font-size: 20px;
 }
+
+.celsius {
+    text-decoration: none;
+}
+.active {
+    color: #939b62;
+    
+}
+
 .fahrenheit {
     text-decoration: none;
 }

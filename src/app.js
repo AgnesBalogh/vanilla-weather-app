@@ -20,6 +20,11 @@ function formatDate(timestamp) {
 function displayTemperature(response){
     console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
+
+
+    celsiusTemperature = response.data.main.temp;
+
+
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
@@ -50,11 +55,9 @@ function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
-  }
+}
 
-
-
-search("Miercurea Ciuc");
+let celsiusTemperature = null;
 
 
 
@@ -62,3 +65,38 @@ search("Miercurea Ciuc");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    
+    
+    
+    celsiusLink.classList.remove("active");
+    let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
+    fahrenheitLink.classList.add("active");
+    
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+    
+
+}
+
+function displayCelsiusTemperature(event) {
+    event.preventDefault();
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+
+search("Miercurea Ciuc");
