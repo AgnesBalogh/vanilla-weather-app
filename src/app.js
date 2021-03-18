@@ -43,7 +43,7 @@ function displayTemperature(response){
 }
 
 
-function search(city) {
+function searchCity(city) {
     let apiKey = "8d5506121e45cc1baa7953c65681c044";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
@@ -54,12 +54,28 @@ function search(city) {
 function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
-    search(cityInputElement.value);
+    searchCity(cityInputElement.value);
 }
 
 let celsiusTemperature = null;
 
+function searchLocation(position) {
+    let apiKey = "8d5506121e45cc1baa7953c65681c044";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
 
+}
+
+
+function showCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+
+}
+
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", showCurrentLocation);
 
 
 
@@ -99,4 +115,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 
-search("Miercurea Ciuc");
+searchCity("Miercurea Ciuc");
