@@ -103,3 +103,7 @@ h2 {
   font-size: 11px;
   text-align: center;
 }
+.center-degree {
+  display: block;
+  margin: 0 auto;
+}
