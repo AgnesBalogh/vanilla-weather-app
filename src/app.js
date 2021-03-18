@@ -132,6 +132,10 @@ currentLocationButton.addEventListener("click", showCurrentLocation);
 
 
 
+
+
+
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
