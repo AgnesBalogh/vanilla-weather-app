@@ -25,7 +25,7 @@ h2 {
 .weather-app {
   padding: 20px;
   border-radius: 5px;
-  background-color: #e4bad4;
+  background-color: #ccffbd;
   box-shadow: 2px 4px 4px 2px;
 }
 .city-name {
@@ -34,7 +34,7 @@ h2 {
   font-weight: bold;
 }
 .features {
-  margin-top: 18px;
+  margin-top: 45px;
   font-family: "Quattrocento Sans", sans-serif;
 }
 .degree {
@@ -98,12 +98,10 @@ h2 {
 .data-row {
   margin-top: 20px;
 }
-
-.degree-value {
-  font-size: 11px;
+.weather-forecast {
   text-align: center;
 }
-.center-degree {
+.forecast-icon {
   display: block;
   margin: 0 auto;
 }
